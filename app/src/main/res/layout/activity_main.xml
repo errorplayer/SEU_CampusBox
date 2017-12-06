@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/OverflowMenuStyle">
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_height="match_parent"
+            android:text="Chou Chou Ke Biao"
+            android:textSize="40dp"
+            android:textColor="#990033"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/xhykt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="#ffff"
+                android:text="学号/一卡通"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/student_id_code"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="3" />
+
+            <Button
+                android:id="@+id/send_request"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:backgroundTint="#ffff"
+                android:text="查询课表"
+                android:textAllCaps="false"
+                android:textColor="#d66"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/WEEK_order_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+
+                android:textColor="#000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/WEEK_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.errorplayer.networktest.AppearanceTools.FlowRadioGroup
+                android:id="@+id/weekday_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <RadioButton
+                    android:id="@+id/mon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="周一"
+                    android:textColor="#555"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/tue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="周二"
+                    android:textColor="#555"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/wed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="周三"
+                    android:textColor="#555"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="周四"
+                    android:textColor="#555"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="周五"
+                    android:textColor="#555"
+                    android:textSize="20dp" />
+
+
+            </com.example.errorplayer.networktest.AppearanceTools.FlowRadioGroup>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/AM_class"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="本app从学生课表获取数据"
+                        android:textColor="#1af"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/PM_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:textColor="#1ae"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/NT_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:textColor="#f000"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#aa33"
+                android:gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="by   青椒牛柳回锅肉"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#aa33"
+                android:gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="bug请提交至opendev_xiaoze@aliyun.com"/>
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="27dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/fab_backgroud"
+            android:backgroundTint="#1ad"
+
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+
+
+            app:elevation="10dp"
+            app:pressedTranslationZ="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout >
